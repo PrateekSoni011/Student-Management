@@ -50,11 +50,11 @@ export const STUDENT_REGISTER = "STUDENT_REGISTER";
 export function studentRegisterAPI (data) {        
     let options = {
             method: 'post',
-            url: 'http://localhost:3006/studentRegisterAPI',
+            url: 'http://localhost:3006/studentRegister',
             data            
         }
     return dispatch => {
-       return CommonApiCalling('post', 'http://localhost:3006/studentRegisterAPI', options)
+       return CommonApiCalling('post', 'http://localhost:3006/studentRegister', options)
         .then((response) => {
             const result = response.data;
             dispatch({type: STUDENT_REGISTER, data: result});
